@@ -21,6 +21,10 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
         authService.logout();
         router.replace('/login');
     };
+    const LINKS = [
+    { href: '/dashboard', label: 'Dashboard' },
+    { href: '/exercises', label: 'Ejercicios' },
+];
 
     return (
         <AuthGuard>
